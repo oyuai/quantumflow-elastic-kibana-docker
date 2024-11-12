@@ -44,7 +44,7 @@ By Running this docker compose you will see all traffic To<->From the host you r
    ```yaml
    license: "INSERT-YOUR-LICENSE-KEY-HERE"
    ```
-## Run Docker Compose:
+3. Run Docker Compose:
 
 ```bash
 docker-compose up -d
