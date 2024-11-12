@@ -9,7 +9,6 @@ By Running this docker compose you will see all traffic To<->From the host you r
 - [Requirements](#requirements)
 - [Optional Requirements](#optional-requirements)
 - [Setup / Install Guide](#setup--install-guide)
-- [Run Docker Compose](#run-docker-compose)
 - [Access Kibana](#access-kibana)
 - [Stopping the Services](#stopping-the-services)
   
@@ -45,10 +44,9 @@ By Running this docker compose you will see all traffic To<->From the host you r
    license: "INSERT-YOUR-LICENSE-KEY-HERE"
    ```
 3. Run Docker Compose:
-
-```bash
-docker-compose up -d
-```
+  ```bash
+  docker-compose up -d
+  ```
 
 
 ## Access Kibana:
