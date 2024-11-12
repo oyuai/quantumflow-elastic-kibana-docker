@@ -16,7 +16,7 @@ By Running this docker compose you will see all traffic To<->From the host you r
 - **GeoLite2 Database** (Optional, required for enhanced geolocation capabilities). Update /etc/quantumflow/maxmind/ (asn.mmdb & city.mmdb) by registering at maxmind.com.
   - Register at [MaxMind](https://www.maxmind.com) to get a license key and download GeoLite2 data to update maxmind files with current mmdb data.
   
-## Setup **(DON'T FORGET TO UPDATE APP.CONFIG.YML WITH YOUR LICENSE KEY)**
+## Setup / Install Guide
 
 1. **Clone the Repository**:
    ```bash
