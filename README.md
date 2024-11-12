@@ -1,5 +1,5 @@
 # QuantumFlow with Elasticsearch and Kibana
-
+[img](https://oyu.ai/wp-content/uploads/2024/11/how-it-works-docker-container-version-scaled.jpg)
 A Docker Compose setup for deploying QuantumFlow with Elasticsearch and Kibana.
 
 ## Requirements
