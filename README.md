@@ -19,15 +19,19 @@ A Docker Compose setup for deploying QuantumFlow with Elasticsearch and Kibana.
    ```bash
    git clone https://github.com/oyuai/quantumflow-elastic-kibana-docker.git
    cd quantumflow-elastic-kibana-docker
-1. **Update ./etc/quantumflow/app.config.yml to include your License**:
-```bash
-vi ./etc/quantumflow/app.config.yml
-```
+2. **Edit the License in the `app.config.yml` File**:
 
-```bash
-license: INSERT-LICENSE-HERE
-```
+   To add your license, open the `app.config.yml` file in a text editor, such as `vi`:
 
+   ```bash
+   # Open the configuration file in vi to edit the license field
+   vi ./etc/quantumflow/app.config.yml
+   ```
+   
+   Inside the file, locate the `license` field and replace `INSERT-LICENSE-HERE` with your actual license key:
+   ```yaml
+   license: "INSERT-YOUR-LICENSE-KEY-HERE"
+   ```
 ## Run Docker Compose:
 
 ```bash
