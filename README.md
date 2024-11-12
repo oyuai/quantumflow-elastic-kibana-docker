@@ -9,8 +9,6 @@ By Running this docker compose you will see all traffic To<->From the host you r
 - [Requirements](#requirements)
 - [Optional Requirements](#optional-requirements)
 - [Setup / Install Guide](#setup--install-guide)
-  - [Clone the Repository](#clone-the-repository)
-  - [Edit License in app.config.yml](#edit-the-license-in-the-appconfigyml-file)
 - [Run Docker Compose](#run-docker-compose)
 - [Access Kibana](#access-kibana)
 - [Stopping the Services](#stopping-the-services)
