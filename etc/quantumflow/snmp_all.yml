@@ -1,0 +1,10 @@
+cache_buffer_size: 90000
+commit_interval: 10000
+workers: 8
+global:
+  port: 161
+  retries: 2
+  timeout: 1000
+  v2_community:
+    - public
+    - private

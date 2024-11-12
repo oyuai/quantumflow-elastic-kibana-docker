@@ -1,0 +1,82 @@
+version: '3.8'  # You can specify the version of the docker-compose format
+
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.15.0
+    container_name: elasticsearch
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms8g -Xmx8g"
+      - http.max_content_length=200mb
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - es-data:/usr/share/elasticsearch/data  # Persistent volume for Elasticsearch data
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    networks:
+      - elastic
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:8.15.0
+    container_name: kibana
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+    volumes:
+      - kibana-data:/usr/share/kibana/data  # Persistent volume for Kibana data
+    ports:
+      - "5601:5601"
+    depends_on:
+      - elasticsearch
+    networks:
+      - elastic
+    healthcheck:
+      test: >
+        curl -s http://alex-gpt.alexlab.com:5601/api/status | grep -q '"level":"available"' && 
+        curl -s http://alex-gpt.alexlab.com:5601/api/status | grep -q '"summary":"All services and plugins are available"'
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 30s  # Optional: Adjust based on Kibana's startup time
+
+  quantumflow:
+    image: oyuai/quantumflow:latest
+    container_name: quantumflow
+    restart: always
+    network_mode: "host"
+    depends_on:
+      kibana:
+        condition: service_healthy
+      elasticsearch:
+        condition: service_started
+    volumes:
+      - ./etc/quantumflow/:/etc/quantumflow/:ro
+
+  pmacct:
+    image: pmacct/pmacctd:latest
+    container_name: pmacct
+    restart: always
+    network_mode: "host"  # Use host networking to listen on all host interfaces
+    volumes:
+      - ./pmacct/:/etc/pmacct/:ro  # Configuration file for pmacct
+    environment:
+      - LC_ALL="en_US.UTF-8"
+      - LANG="en_US.UTF-8"
+      - LANGUAGE="en_US.UTF-8"
+
+
+volumes:
+  es-data:
+    driver: local  # Define a named volume for Elasticsearch data
+  kibana-data:
+    driver: local  # Define a named volume for Kibana data
+
+networks:
+  elastic:
+    driver: bridge
+

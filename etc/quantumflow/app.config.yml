@@ -1,0 +1,42 @@
+license: INSERT-LICENSE-HERE
+listen_addresses:
+  - url: http://0.0.0.0:2055
+    count: 1
+    workers: 8
+    blocking: false
+    queue_size: 5000000
+loglevel: "info"
+#log_file_path: "/var/log/quantumflow/quantumflow.log"
+log_max_size_mb: 5
+log_max_file_num: 1
+log_max_age_days: 30
+
+  # ELASTICSEARCH/OUTPUT CONFIGURATION
+transport: "elasticsearch"
+transport_elasticsearch_urls: "http://127.0.0.1:9200"
+transport_elasticsearch_index: "quantumflow"
+transport_elasticsearch_flush_interval: 1000
+#transport_elasticsearch_flush_size: 10000
+transport_elasticsearch_num_workers: 8
+#transport_elasticsearch_user: "oyu"
+#transport_elasticsearch_password: "elastic"
+#transport_elasticsearch_api_key: "pass"
+#transport_elasticsearch_verify_certs: false
+transport_elasticsearch_overwrite_templates: true
+
+  # KIBANA CONFIGURATION
+kibana_url: "http://127.0.0.1:5601"
+#kibana_space: "kibana_space"
+kibana_dashboard_overwrite: true
+#kibana_user: "kibana_user"
+#kibana_password: "kibana_password"
+#kibana_api_key: "kibana_api_key"
+
+  # ENRICHMENT CONFIGURATION
+enrich_geoip_asn_file_path: "/etc/quantumflow/maxmind/asn.mmdb"
+enrich_geoip_city_file_path: "/etc/quantumflow/maxmind/city.mmdb"
+enrich_dns_enable: true
+#enrich_dns_private_only: false
+#enrich_snmp_file_path: "/etc/quantumflow/snmp_all.yml"
+enrich_app_id_enable: true
+
