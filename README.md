@@ -4,6 +4,11 @@ A Docker Compose setup for deploying QuantumFlow with Elasticsearch and Kibana.
 
 ## Requirements
 - **Docker** and **Docker Compose** installed on your machine.
+  - [Install Docker on Ubuntu Linux](https://docs.docker.com/engine/install/ubuntu/)
+  - [Install Docker on Ubuntu Linux](https://docs.docker.com/engine/install/debian/)
+  - [Install Docker on Ubuntu Linux](https://docs.docker.com/engine/install/rhel/)
+
+## Optional Requirements
 - **GeoLite2 Database** (Optional, required for enhanced geolocation capabilities).
   - Register at [MaxMind](https://www.maxmind.com) to get a license key and download GeoLite2 data to update maxmind files with current mmdb data.
   
