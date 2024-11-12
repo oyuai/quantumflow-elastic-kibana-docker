@@ -1,4 +1,4 @@
-license: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJveXVhaSIsImV4cCI6MTczNDAyMzU0N30.BgQBO-YM0hypChJbK-Il2qn0rzZuIhLspkVO3HX7S7w
+license: INSERT-LICENSE-HERE
 listen_addresses:
   - url: http://0.0.0.0:2055
     count: 1
