@@ -13,7 +13,7 @@ A Docker Compose setup for deploying QuantumFlow with Elasticsearch and Kibana.
 - **GeoLite2 Database** (Optional, required for enhanced geolocation capabilities).
   - Register at [MaxMind](https://www.maxmind.com) to get a license key and download GeoLite2 data to update maxmind files with current mmdb data.
   
-## Setup
+## Setup **DON'T FORGET TO UPDATE app.config.yml WITH YOUR LICENSE KEY**
 
 1. **Clone the Repository**:
    ```bash
