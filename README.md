@@ -28,4 +28,4 @@ Open a browser and go to [http://localhost:5601](http://localhost:5601) (if navi
 To stop all containers, run:
 
 ```bash
-docker-compose down```
+docker-compose down
