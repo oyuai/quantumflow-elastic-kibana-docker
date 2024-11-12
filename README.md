@@ -17,7 +17,8 @@ A Docker Compose setup for deploying QuantumFlow with Elasticsearch and Kibana.
 ## Run Docker Compose:
 
 ```bash
-docker-compose up -d```
+docker-compose up -d
+```
 
 
 ## Access Kibana:
