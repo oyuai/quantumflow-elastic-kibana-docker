@@ -1,7 +1,7 @@
 # QuantumFlow with Elasticsearch and Kibana
 A Docker Compose setup for deploying QuantumFlow with Elasticsearch and Kibana.
 
-![img](https://oyu.ai/wp-content/uploads/2024/11/how-it-works-docker-container-version-scaled.jpg)
+![how it works docker container version](https://github.com/user-attachments/assets/39079e14-6745-4135-9fc5-b1fb5dab825c)
 
 ## Requirements
 - [**Docker** and **Docker Compose** installed on your machine.](https://docs.docker.com/engine/install/)
@@ -41,7 +41,7 @@ docker-compose up -d
 
 ## Access Kibana:
 Open a browser and go to [http://localhost:5601](http://localhost:5601) (if navigating directly from machine running docker container) or http://ip-of-host:5601 to start using Kibana.
-
+![dash example](https://github.com/user-attachments/assets/9c26248f-13d1-4f80-82f6-d4feae1a954b)
 ## Stopping the Services
 To stop all containers, run:
 
