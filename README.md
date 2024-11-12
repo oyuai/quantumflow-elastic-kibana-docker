@@ -19,7 +19,11 @@ A Docker Compose setup for deploying QuantumFlow with Elasticsearch and Kibana.
    ```bash
    git clone https://github.com/oyuai/quantumflow-elastic-kibana-docker.git
    cd quantumflow-elastic-kibana-docker
-   
+1. **Update ./etc/quantumflow/app.config.yml to include your License**:
+```bash
+license: INSERT-LICENSE-HERE
+```
+
 ## Run Docker Compose:
 
 ```bash
