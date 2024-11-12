@@ -1,6 +1,6 @@
 # QuantumFlow with Elasticsearch and Kibana
 A Docker Compose setup for deploying QuantumFlow with Elasticsearch and Kibana.
-By Running this docker compose you will see all traffic To<->From the host you run it on, it can also collect flows on UDP port 2055. If you do not want to collect flows from the host you run this on remove the pmacct service from the docker-compose.yml file.
+By Running this docker compose you will see all traffic To<->From the host you run it on, **it can also collect flows on UDP port 2055**. If you do not want to collect flows from the host you run this on remove the pmacct service from the docker-compose.yml file.
 
 ![how it works docker container version](https://github.com/user-attachments/assets/39079e14-6745-4135-9fc5-b1fb5dab825c)
 
