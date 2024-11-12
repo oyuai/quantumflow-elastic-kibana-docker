@@ -41,6 +41,7 @@ docker-compose up -d
 
 ## Access Kibana:
 Open a browser and go to [http://localhost:5601](http://localhost:5601) (if navigating directly from machine running docker container) or http://ip-of-host:5601 to start using Kibana.
+![DASH1](https://github.com/user-attachments/assets/e3587823-1a2e-4839-976c-5214629ddc93)
 ![dash example](https://github.com/user-attachments/assets/9c26248f-13d1-4f80-82f6-d4feae1a954b)
 ## Stopping the Services
 To stop all containers, run:
