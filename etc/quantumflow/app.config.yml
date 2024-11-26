@@ -21,7 +21,7 @@ transport_elasticsearch_num_workers: 8
 #transport_elasticsearch_user: "oyu"
 #transport_elasticsearch_password: "elastic"
 #transport_elasticsearch_api_key: "pass"
-#transport_elasticsearch_verify_certs: false
+transport_elasticsearch_verify_certs: false
 transport_elasticsearch_overwrite_templates: true
 
   # KIBANA CONFIGURATION
@@ -31,6 +31,7 @@ kibana_dashboard_overwrite: true
 #kibana_user: "kibana_user"
 #kibana_password: "kibana_password"
 #kibana_api_key: "kibana_api_key"
+kibana_verify_certs: false
 
   # ENRICHMENT CONFIGURATION
 enrich_geoip_asn_file_path: "/etc/quantumflow/maxmind/asn.mmdb"
