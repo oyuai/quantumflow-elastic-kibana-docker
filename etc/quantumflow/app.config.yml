@@ -39,5 +39,4 @@ enrich_geoip_city_file_path: "/etc/quantumflow/maxmind/city.mmdb"
 enrich_dns_enable: true
 #enrich_dns_private_only: false
 #enrich_snmp_file_path: "/etc/quantumflow/snmp_all.yml"
-enrich_app_id_enable: true
 
